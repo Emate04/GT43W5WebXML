@@ -1,0 +1,24 @@
+<konferencia>
+  <cim>GT43W5 konferencia 2025</cim>
+  <datum>2025-11-12</datum>
+  <helyszin>Miskolc, Miskolci Egyetem E32</helyszin>
+  <eloado>
+    <nev>Dr. Papp László</nev>
+    <adoszam>23467859-1-42</adoszam>
+    <lakcim>Budapest, Lónyay út 36.</lakcim>
+  </eloado>
+  <hallgatok>
+    <hallgato>
+      <nev>Kacsa Dávid</nev>
+      <lakcim>Miskolc, Kossuth utca 32.</lakcim>
+    </hallgato>
+    <hallgato>
+      <nev>Nagy Péter</nev>
+      <lakcim>Mályi, Petőfi út. 12.</lakcim>
+    </hallgato>
+    <hallgato>
+      <nev>Kiss Eszter</nev>
+      <lakcim>Miskolc, Egyetemváros út 3.</lakcim>
+    </hallgato>
+  </hallgatok>
+</konferencia>
