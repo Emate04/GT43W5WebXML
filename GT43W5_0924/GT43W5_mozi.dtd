@@ -1,0 +1,36 @@
+<!ELEMENT mozi (film*)>
+<!ELEMENT film (rendezo+, szinesz+, iro+)>
+<!ATTLIST film 
+    id ID #REQUIRED
+    mufaj (horror | drama | vigjatek) #REQUIRED>
+
+<!ELEMENT rendezo (segédrendezo*, operatőr*)>
+<!ATTLIST rendezo
+    id ID #IMPLIED
+    nev CDATA #IMPLIED>
+
+<!ELEMENT segédrendezo EMPTY>
+<!ATTLIST segédrendezo nev CDATA #REQUIRED>
+
+<!ELEMENT operatőr EMPTY>
+<!ATTLIST operatőr nev CDATA #REQUIRED>
+
+<!ELEMENT szinesz (gyerekszinesz* , musicalszinesz* , szinkornszinesz*)>
+<!ATTLIST szinesz
+    id ID #IMPLIED
+    nev CDATA #IMPLIED>
+
+<!ELEMENT gyerekszinesz EMPTY>
+<!ELEMENT musicalszinesz EMPTY>
+<!ELEMENT szinkornszinesz EMPTY>
+
+<!ELEMENT iro (koiro* , lektor*)>
+<!ATTLIST iro 
+    id ID #IMPLIED
+    nev CDATA #IMPLIED>
+
+<!ELEMENT koiro EMPTY>
+<!ATTLIST koiro nev CDATA #REQUIRED>
+
+<!ELEMENT lektor EMPTY>
+<!ATTLIST lektor nev CDATA #REQUIRED>

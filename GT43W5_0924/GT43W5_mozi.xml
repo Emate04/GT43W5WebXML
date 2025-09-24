@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mozi SYSTEM "GT43W5_mozi.dtd">
+<mozi>
+    <film id="txn_nxm_2jb" mufaj="horror">
+        <rendezo id="nzk_4xm_2jb" nev="alex" />
+        <szinesz id="u5g_4xm_2jb" nev="Madison_Ivy" />
+        <szinesz id="a">
+            <gyerekszinesz />
+            <musicalszinesz />
+            <szinkornszinesz />
+        </szinesz>
+        <iro id="trv_4xm_2jb" />
+    </film>
+    <film id="txn_nxm_2jb_2" mufaj="drama">
+        <rendezo id="rendezo_1" nev="Papp Laszlo">
+            <segédrendezo nev="Kiss_Peter" />
+            <operatőr nev="Nagy_Kristof" />
+        </rendezo>
+        <iro id="iro_1" nev="Vereb_Adam">
+            <koiro nev="Nagy_Luca" />
+            <lektor nev="Hajdu_Laaszlo" />
+        </iro>
+    </film>
+</mozi>
