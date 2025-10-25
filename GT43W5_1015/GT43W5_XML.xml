@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EttermekRendszer>
+  <Foszakacs>
+    <Fkod></Fkod>
+    <Nev></Nev>
+    <Eletkor></Eletkor>
+    <Vegzettseg></Vegzettseg>
+  </Foszakacs>
+
+  <Etterem>
+    <Ekod></Ekod>
+    <Nev></Nev>
+    <Csillag></Csillag>
+    <Cim>
+      <Varos></Varos>
+      <Utca></Utca>
+      <Hazszam></Hazszam>
+    </Cim>
+  </Etterem>
+
+  <Szakacs>
+    <Szkod></Szkod>
+    <Nev></Nev>
+    <Reszleg></Reszleg>
+    <Vegzettseg></Vegzettseg>
+  </Szakacs>
+
+  <Gyakornok>
+    <Gykod></Gykod>
+    <Nev></Nev>
+    <Gyakorlat>
+      <Kezdete></Kezdete>
+      <Idotartama></Idotartama>
+    </Gyakorlat>
+    <Muszak></Muszak>
+  </Gyakornok>
+
+  <Vendeg>
+    <Vkod></Vkod>
+    <Nev></Nev>
+    <Eletkor></Eletkor>
+    <Cim>
+      <Varos></Varos>
+      <Utca></Utca>
+      <Hazszam></Hazszam>
+    </Cim>
+  </Vendeg>
+
+  <Rendeles>
+    <Etel></Etel>
+    <Osszeg></Osszeg>
+  </Rendeles>
+
+  <Kapcsolatok>
+    <E_F>
+      <FoszakacsRef></FoszakacsRef>
+      <EtteremRef></EtteremRef>
+    </E_F>
+
+    <E_Sz>
+      <EtteremRef></EtteremRef>
+      <SzakacsRef></SzakacsRef>
+    </E_Sz>
+
+    <E_Gy>
+      <EtteremRef></EtteremRef>
+      <GyakornokRef></GyakornokRef>
+    </E_Gy>
+
+    <RendelesKapcsolat>
+      <EtteremRef></EtteremRef>
+      <VendegRef></VendegRef>
+    </RendelesKapcsolat>
+  </Kapcsolatok>
+</EttermekRendszer>
