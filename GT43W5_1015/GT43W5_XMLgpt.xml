@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GT43W5_vendeglatas>
+  
+  <etterem>
+    <nev>Aranykanál Étterem</nev>
+    <cim>Miskolc, Fő utca 12.</cim>
+  </etterem>
+
+  <szemelyzet>
+    <foszakacs>
+      <nev>Kovács Béla</nev>
+      <tapasztalat>15 év</tapasztalat>
+    </foszakacs>
+
+    <szakacs>
+      <nev>Nagy László</nev>
+      <szakterulet>Magyaros ételek</szakterulet>
+    </szakacs>
+
+    <gyakornok>
+      <nev>Tóth Anna</nev>
+      <iskola>Miskolci SZC Vendéglátóipari Technikum</iskola>
+    </gyakornok>
+  </szemelyzet>
+
+  <etel>
+    <nev>Marhapörkölt galuskával</nev>
+    <ar>4200</ar>
+  </etel>
+
+  <rendeles>
+    <vendeg>
+      <nev>Szabó Gábor</nev>
+      <asztal>5</asztal>
+    </vendeg>
+    <rendelt_etelek>
+      <etel>Marhapörkölt galuskával</etel>
+    </rendelt_etelek>
+    <ido>2025-10-28T12:30</ido>
+  </rendeles>
+
+</GT43W5_vendeglatas>

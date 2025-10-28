@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+  <xs:simpleType name="nevTipus">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="2"/>
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="cimTipus">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="5"/>
+      <xs:maxLength value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="arTipus">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:minInclusive value="100"/>
+      <xs:maxInclusive value="100000"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="idoTipus">
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+
+  <xs:complexType name="etteremTipus">
+    <xs:sequence>
+      <xs:element name="nev" type="nevTipus"/>
+      <xs:element name="cim" type="cimTipus"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="foszakacsTipus">
+    <xs:sequence>
+      <xs:element name="nev" type="nevTipus"/>
+      <xs:element name="tapasztalat" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="szakacsTipus">
+    <xs:sequence>
+      <xs:element name="nev" type="nevTipus"/>
+      <xs:element name="szakterulet" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="gyakornokTipus">
+    <xs:sequence>
+      <xs:element name="nev" type="nevTipus"/>
+      <xs:element name="iskola" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="szemelyzetTipus">
+    <xs:sequence>
+      <xs:element name="foszakacs" type="foszakacsTipus"/>
+      <xs:element name="szakacs" type="szakacsTipus"/>
+      <xs:element name="gyakornok" type="gyakornokTipus"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="etelTipus">
+    <xs:sequence>
+      <xs:element name="nev" type="nevTipus"/>
+      <xs:element name="ar" type="arTipus"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="vendegTipus">
+    <xs:sequence>
+      <xs:element name="nev" type="nevTipus"/>
+      <xs:element name="asztal" type="xs:positiveInteger"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="rendelesTipus">
+    <xs:sequence>
+      <xs:element name="vendeg" type="vendegTipus"/>
+      <xs:element name="rendelt_etelek">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="etel" type="nevTipus" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ido" type="idoTipus"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="GT43W5_vendeglatas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="etterem" type="etteremTipus"/>
+        <xs:element name="szemelyzet" type="szemelyzetTipus"/>
+        <xs:element name="etel" type="etelTipus"/>
+        <xs:element name="rendeles" type="rendelesTipus"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
