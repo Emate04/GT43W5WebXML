@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<hallgatok>
+      
+  <hallgato id="01">
+            
+    <keresztnev>Pál</keresztnev>
+            
+    <vezeteknev>Kiss</vezeteknev>
+            
+    <foglalkozas>Web developer</foglalkozas>
+        
+  </hallgato>
+      
+  <hallgato id="02">
+            
+    <keresztnev>Piroska</keresztnev>
+            
+    <vezeteknev>Virág</vezeteknev>
+            
+    <foglalkozas>Programozó</foglalkozas>
+        
+  </hallgato>
+      
+  <hallgato id="03">
+            
+    <keresztnev>Ferenc</keresztnev>
+            
+    <vezeteknev>Nagy</vezeteknev>
+            
+    <foglalkozas>Associate professor</foglalkozas>
+        
+  </hallgato>
+  
+</hallgatok>
