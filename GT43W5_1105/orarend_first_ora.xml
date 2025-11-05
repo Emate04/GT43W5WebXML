@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ora id="1" tipus="előadás">
+          
+  <targy>Elektrotechnika-elektronika</targy>
+          
+  <idopont>
+                
+    <nap>Hétfő</nap>
+                
+    <tol>08:00</tol>
+                
+    <ig>09:50</ig>
+            
+  </idopont>
+          
+  <helyszin>E 3</helyszin>
+          
+  <oktato>Szabó Norbert István</oktato>
+          
+  <szak>Mérnökinformatkius</szak>
+      
+</ora>
