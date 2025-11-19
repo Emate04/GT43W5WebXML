@@ -1,0 +1,149 @@
+{
+  "GT43W5_orarend": {
+    "ora": [
+      {
+        "targy": "Elektrotechnika-elektronika",
+        "idopont": {
+          "nap": "Hetfo",
+          "tol": "08:00",
+          "ig": "09:50"
+        },
+        "helyszin": "E 3",
+        "oktato": "Szabo Norbert Istvan",
+        "szak": "Mernokinformatkius"
+      },
+      {
+        "targy": "Web technologiak 1.",
+        "idopont": {
+          "nap": "Hetfo",
+          "tol": "10:00",
+          "ig": "11:30"
+        },
+        "helyszin": "E 5",
+        "oktato": "Dr. Agardi Anita",
+        "szak": "Mernokinformatkius"
+      },
+      {
+        "targy": "Szakmai angol I.",
+        "idopont": {
+          "nap": "Hetfo",
+          "tol": "12:00",
+          "ig": "13:30"
+        },
+        "helyszin": "A1/317",
+        "oktato": "Dr. Bajzath Tunde",
+        "szak": "Mernokinformatkius"
+      },
+      {
+        "targy": "Web technologiak 1. (gyakorlat)",
+        "idopont": {
+          "nap": "Hetfo",
+          "tol": "14:00",
+          "ig": "15:30"
+        },
+        "helyszin": "L101",
+        "oktato": "Dr. Agardi Anita",
+        "szak": "Mernokinformatkius"
+      },
+      {
+        "targy": "Mobil programozasi alapok",
+        "idopont": {
+          "nap": "Hetfo",
+          "tol": "16:00",
+          "ig": "17:30"
+        },
+        "helyszin": "L101",
+        "oktato": "Dr. Agardi Anita",
+        "szak": "Mernokinformatkius"
+      },
+      {
+        "targy": "Mobil programozasi alapok (gyakorlat)",
+        "idopont": {
+          "nap": "Hetfo",
+          "tol": "18:00",
+          "ig": "19:30"
+        },
+        "helyszin": "L101",
+        "oktato": "Dr. Agardi Anita",
+        "szak": "Mernokinformatkius"
+      },
+      {
+        "targy": "Windows rendszergazda",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "08:00",
+          "ig": "09:30"
+        },
+        "helyszin": "L103",
+        "oktato": "Dr. Wagner Gyorgy",
+        "szak": "Mernokinformatkius"
+      },
+      {
+        "targy": "Mesterseges intelligencia alapok",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "10:00",
+          "ig": "11:30"
+        },
+        "helyszin": "E32",
+        "oktato": "Kunne Dr. Tamas Judit; Fazekas Levente Aron",
+        "szak": "Mernokinformatkius"
+      },
+      {
+        "targy": "Mesterseges intelligencia alapok (gyakorlat)",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "12:00",
+          "ig": "13:30"
+        },
+        "helyszin": "E32",
+        "oktato": "Kunne Dr. Tamas Judit; Fazekas Levente Aron",
+        "szak": "Mernokinformatkius"
+      },
+      {
+        "targy": "Elektrotechnika-elektronika (gyakorlat)",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "14:00",
+          "ig": "15:30"
+        },
+        "helyszin": "T058",
+        "oktato": "Dr. Kozsely Gabor",
+        "szak": "Mernokinformatkius"
+      },
+      {
+        "targy": "Windows rendszergazda (gyakorlat)",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "16:00",
+          "ig": "18:30"
+        },
+        "helyszin": "L103",
+        "oktato": "Dr. Wagner Gyorgy",
+        "szak": "Mernokinformatkius"
+      },
+      {
+        "targy": "Webes adatkezelo kornyezetek",
+        "idopont": {
+          "nap": "Szerda",
+          "tol": "08:00",
+          "ig": "09:30"
+        },
+        "helyszin": "T050",
+        "oktato": "Dr. Kovacs Laszlo Jozsef",
+        "szak": "Mernokinformatkius"
+      },
+      {
+        "targy": "Webes adatkezelo kornyezetek (gyakorlat)",
+        "idopont": {
+          "nap": "Szerda",
+          "tol": "10:00",
+          "ig": "11:30"
+        },
+        "helyszin": "L103",
+        "oktato": "Dr. Bednarik Laszlo",
+        "szak": "Mernokinformatkius"
+      }
+    ]
+  }
+}

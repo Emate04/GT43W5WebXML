@@ -1,0 +1,149 @@
+{
+  "GT43W5_orarend": {
+    "ora": [
+      {
+        "targy": "Elektrotechnika-elektronika",
+        "idopont": {
+          "nap": "Hétfő",
+          "tol": "08:00",
+          "ig": "09:50"
+        },
+        "helyszin": "E 3",
+        "oktato": "Szabó Norbert István",
+        "szak": "Mérnökinformatkius"
+      },
+      {
+        "targy": "Web technológiák 1.",
+        "idopont": {
+          "nap": "Hétfő",
+          "tol": "10:00",
+          "ig": "11:30"
+        },
+        "helyszin": "E 5",
+        "oktato": "Dr. Agárdi Anita",
+        "szak": "Mérnökinformatkius"
+      },
+      {
+        "targy": "Szakmai angol I.",
+        "idopont": {
+          "nap": "Hétfő",
+          "tol": "12:00",
+          "ig": "13:30"
+        },
+        "helyszin": "A1/317",
+        "oktato": "Dr. Bajzáth Tünde",
+        "szak": "Mérnökinformatkius"
+      },
+      {
+        "targy": "Web technológiák 1. (gyakorlat)",
+        "idopont": {
+          "nap": "Hétfő",
+          "tol": "14:00",
+          "ig": "15:30"
+        },
+        "helyszin": "L101",
+        "oktato": "Dr. Agárdi Anita",
+        "szak": "Mérnökinformatkius"
+      },
+      {
+        "targy": "Mobil programozási alapok",
+        "idopont": {
+          "nap": "Hétfő",
+          "tol": "16:00",
+          "ig": "17:30"
+        },
+        "helyszin": "L101",
+        "oktato": "Dr. Agárdi Anita",
+        "szak": "Mérnökinformatkius"
+      },
+      {
+        "targy": "Mobil programozási alapok (gyakorlat)",
+        "idopont": {
+          "nap": "Hétfő",
+          "tol": "18:00",
+          "ig": "19:30"
+        },
+        "helyszin": "L101",
+        "oktato": "Dr. Agárdi Anita",
+        "szak": "Mérnökinformatkius"
+      },
+      {
+        "targy": "Windows rendszergazda",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "08:00",
+          "ig": "09:30"
+        },
+        "helyszin": "L103",
+        "oktato": "Dr. Wagner György",
+        "szak": "Mérnökinformatkius"
+      },
+      {
+        "targy": "Mesterséges intelligencia alapok",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "10:00",
+          "ig": "11:30"
+        },
+        "helyszin": "E32",
+        "oktato": "Kunné Dr. Tamás Judit; Fazekas Levente Áron",
+        "szak": "Mérnökinformatkius"
+      },
+      {
+        "targy": "Mesterséges intelligencia alapok (gyakorlat)",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "12:00",
+          "ig": "13:30"
+        },
+        "helyszin": "E32",
+        "oktato": "Kunné Dr. Tamás Judit; Fazekas Levente Áron",
+        "szak": "Mérnökinformatkius"
+      },
+      {
+        "targy": "Elektrotechnika-elektronika (gyakorlat)",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "14:00",
+          "ig": "15:30"
+        },
+        "helyszin": "T058",
+        "oktato": "Dr. Kozsely Gábor",
+        "szak": "Mérnökinformatkius"
+      },
+      {
+        "targy": "Windows rendszergazda (gyakorlat)",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "16:00",
+          "ig": "18:30"
+        },
+        "helyszin": "L103",
+        "oktato": "Dr. Wagner György",
+        "szak": "Mérnökinformatkius"
+      },
+      {
+        "targy": "Webes adatkezelő környezetek",
+        "idopont": {
+          "nap": "Szerda",
+          "tol": "08:00",
+          "ig": "09:30"
+        },
+        "helyszin": "T050",
+        "oktato": "Dr. Kovács László József",
+        "szak": "Mérnökinformatkius"
+      },
+      {
+        "targy": "Webes adatkezelő környezetek (gyakorlat)",
+        "idopont": {
+          "nap": "Szerda",
+          "tol": "10:00",
+          "ig": "11:30"
+        },
+        "helyszin": "L103",
+        "oktato": "Dr. Bednarik László",
+        "szak": "Mérnökinformatkius"
+      }
+    ]
+  }
+}
