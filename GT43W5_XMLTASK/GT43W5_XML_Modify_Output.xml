@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GT43W5_Etterem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="GT43W5_XMLSchema.xsd">
+        
+    <Beszallito B_ID="10">
+                
+        <Nev>Bio-Farm Kft.</Nev>
+                
+        <Elerhetoseg>info@zoldseg.hu</Elerhetoseg>
+                
+        <Cim>
+                        
+            <Varos>Miskolc</Varos>
+                        
+            <IRSZ>3525</IRSZ>
+                        
+            <Utca>Rákóczi utca</Utca>
+                        
+            <Hazszam>12</Hazszam>
+                    
+        </Cim>
+                
+        <Pizzazo_FK>1</Pizzazo_FK>
+            
+    </Beszallito>
+        
+    <Beszallito B_ID="11">
+                
+        <Nev>Hús Nagyker Bt.</Nev>
+                
+        <Elerhetoseg>rendeles@husnagyker.hu</Elerhetoseg>
+                
+        <Cim>
+                        
+            <Varos>Felsőzsolca</Varos>
+                        
+            <IRSZ>3561</IRSZ>
+                        
+            <Utca>Kassa út</Utca>
+                        
+            <Hazszam>4</Hazszam>
+                    
+        </Cim>
+                
+        <Pizzazo_FK>2</Pizzazo_FK>
+            
+    </Beszallito>
+        
+    <Futar F_ID="20">
+                
+        <Nev>Nagy Gábor</Nev>
+                
+        <Telefonszam>06-30-123-1234</Telefonszam>
+                
+        <Jarmu>Autó</Jarmu>
+                
+        <Pizzazo_FK>1</Pizzazo_FK>
+            
+    </Futar>
+        
+    <Futar F_ID="21">
+                
+        <Nev>Papp István</Nev>
+                
+        <Telefonszam>06-70-123-1234</Telefonszam>
+                
+        <Jarmu>Kerékpár</Jarmu>
+                
+        <Pizzazo_FK>1</Pizzazo_FK>
+            
+    </Futar>
+        
+    <Pizzazo P_ID="1">
+                
+        <Nev>Pizza Hut Miskolc</Nev>
+                
+        <Nyitvatartas>10:00-22:00</Nyitvatartas>
+                
+        <Telefonszam>06-46-123-456</Telefonszam>
+            
+    </Pizzazo>
+        
+    <Pizzazo P_ID="2">
+                
+        <Nev>Pizza Me Belváros</Nev>
+                
+        <Nyitvatartas>11:00-23:00</Nyitvatartas>
+                
+        <Telefonszam>06-46-987-654</Telefonszam>
+            
+    </Pizzazo>
+        
+    <Pizza Pizza_ID="30">
+                
+        <Nev>Sonkás Pizza</Nev>
+                
+        <Ar>3500</Ar>
+                
+        <Meret>32</Meret>
+                
+        <Feltet>Paradicsomszósz</Feltet>
+                
+        <Feltet>Sajt</Feltet>
+                
+        <Feltet>Sonka</Feltet>
+                
+        <Pizzazo_FK>1</Pizzazo_FK>
+            
+    </Pizza>
+        
+    <Pizza Pizza_ID="31">
+                
+        <Nev>Vega Pizza</Nev>
+                
+        <Ar>2200</Ar>
+                
+        <Meret>28</Meret>
+                
+        <Feltet>Tejfölös alap</Feltet>
+                
+        <Feltet>Kukorica</Feltet>
+                
+        <Feltet>Brokkoli</Feltet>
+                
+        <Pizzazo_FK>1</Pizzazo_FK>
+            
+    </Pizza>
+        
+    <Rendeles R_ID="500">
+                
+        <Datum>2025-11-27</Datum>
+                
+        <Darabszam>2</Darabszam>
+         
+        
+        <Pizza_FK>30</Pizza_FK>
+                
+        <Vevo_FK>100</Vevo_FK>
+            
+        <Surgos>IGEN</Surgos>
+    </Rendeles>
+        
+    <Rendeles R_ID="501">
+                
+        <Datum>2025-11-28</Datum>
+                
+        <Darabszam>1</Darabszam>
+                
+        <Pizza_FK>31</Pizza_FK>
+                
+        <Vevo_FK>101</Vevo_FK>
+            
+    </Rendeles>
+        
+    <Vevo V_ID="100">
+                
+        <Nev>Kovács Béla</Nev>
+                
+        <Telefonszam>06-20-234-5678</Telefonszam>
+                
+        <Cim>
+                        
+            <Varos>Miskolc</Varos>
+                        
+            <IRSZ>3530</IRSZ>
+                        
+            <Utca>Arany János út</Utca>
+                        
+            <Hazszam>8/A</Hazszam>
+                    
+        </Cim>
+            
+    </Vevo>
+        
+    <Vevo V_ID="101">
+                
+        <Nev>Szabó Anna</Nev>
+                
+        <Telefonszam>06-30-345-4321</Telefonszam>
+                
+        <Cim>
+                        
+            <Varos>Miskolc</Varos>
+                        
+            <IRSZ>3529</IRSZ>
+                        
+            <Utca>Szentgyörgy út</Utca>
+                        
+            <Hazszam>5</Hazszam>
+                    
+        </Cim>
+            
+    </Vevo>
+        
+    <Bankkartya K_ID="1234-5678">
+                
+        <Lejarat>2026-10</Lejarat>
+                
+        <Bank>OTP</Bank>
+                
+        <Tipus>MasterCard</Tipus>
+                
+        <Vevo_FK>100</Vevo_FK>
+            
+    </Bankkartya>
+        
+    <Bankkartya K_ID="9876-5432">
+                
+        <Lejarat>2025-05</Lejarat>
+                
+        <Bank>Erste</Bank>
+                
+        <Tipus>Visa</Tipus>
+                
+        <Vevo_FK>101</Vevo_FK>
+            
+    </Bankkartya>
+    
+</GT43W5_Etterem>
