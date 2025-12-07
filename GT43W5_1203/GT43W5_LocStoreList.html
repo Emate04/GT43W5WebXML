@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>GT43W5 Órarend - Lista</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; }
+        h1 { color: #333; }
+        
+        .controls { background: #e9ecef; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+        input[type="text"] { padding: 5px; width: 250px; }
+        button { padding: 6px 12px; cursor: pointer; }
+        
+        .card {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-left: 5px solid #007bff; 
+        }
+        .card h3 { margin-top: 0; color: #333; }
+        .card p { margin: 5px 0; color: #555; }
+        .highlight { font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>GT43W5 Órarend JSON (Lista)</h1>
+
+    <div class="controls">
+        <input type="file" id="fileInput" accept=".json">
+        <button onclick="loadFromLocalStorage()">LocalStorage betöltése</button>
+        <br><br>
+        <label>Keresés tárgy szerint: </label>
+        <input type="text" id="searchInput" placeholder="Írja be a tárgy nevét..." onkeyup="searchSubject()">
+    </div>
+
+    <div id="listContainer"></div>
+
+    <script>
+        let currentData = [];
+
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const rawJson = JSON.parse(e.target.result);
+                    
+                    if (rawJson.GT43W5_orarend && rawJson.GT43W5_orarend.ora) {
+                        currentData = rawJson.GT43W5_orarend.ora;
+                    } else if (Array.isArray(rawJson)) {
+                        currentData = rawJson;
+                    } else {
+                        alert("Nem megfelelő JSON formátum!");
+                        return;
+                    }
+
+                    localStorage.setItem('GT43W5_orarend_data', JSON.stringify(currentData));
+                    alert("Sikeres betöltés és mentés a LocalStorage-ba!");
+                    renderList(currentData);
+                } catch (error) {
+                    console.error(error);
+                    alert("Hiba a JSON feldolgozásakor!");
+                }
+            };
+            reader.readAsText(file);
+        });
+
+        function loadFromLocalStorage() {
+            const storedData = localStorage.getItem('GT43W5_orarend_data');
+            if (storedData) {
+                currentData = JSON.parse(storedData);
+                renderList(currentData);
+            } else {
+                alert("Nincs mentett adat a LocalStorage-ban!");
+            }
+        }
+
+        function renderList(data) {
+            const container = document.getElementById('listContainer');
+            container.innerHTML = '';
+
+            data.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'card';
+                div.innerHTML = `
+                    <h3>${item.targy}</h3>
+                    <p><strong>Nap:</strong> ${item.idopont.nap}</p>
+                    <p><strong>Idő:</strong> ${item.idopont.tol} - ${item.idopont.ig}</p>
+                    <p><strong>Helyszín:</strong> ${item.helyszin}</p>
+                    <p><strong>Oktató:</strong> ${item.oktato}</p>
+                    <p><strong>Szak:</strong> ${item.szak}</p>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function searchSubject() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = currentData.filter(item => 
+                item.targy.toLowerCase().includes(query)
+            );
+            renderList(filtered);
+        }
+    </script>
+</body>
+</html>

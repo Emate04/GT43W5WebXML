@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>GT43W5 Órarend - Táblázat</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        
+        .controls { background: #e9ecef; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+        button { padding: 6px 12px; cursor: pointer; }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #f2f2f2; font-weight: bold; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        tr:hover { background-color: #f1f1f1; }
+    </style>
+</head>
+<body>
+
+    <h1>GT43W5 Órarend JSON (Táblázat)</h1>
+
+    <div class="controls">
+        <input type="file" id="fileInput" accept=".json">
+        <button onclick="loadFromLocalStorage()">LocalStorage betöltése</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tárgy</th>
+                <th>Nap</th>
+                <th>Tól</th>
+                <th>Ig</th>
+                <th>Helyszín</th>
+                <th>Oktató</th>
+                <th>Szak</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            </tbody>
+    </table>
+
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const rawJson = JSON.parse(e.target.result);
+                    let data = [];
+                    
+                    if (rawJson.GT43W5_orarend && rawJson.GT43W5_orarend.ora) {
+                        data = rawJson.GT43W5_orarend.ora;
+                    } else if (Array.isArray(rawJson)) {
+                        data = rawJson;
+                    } else {
+                        alert("Nem megfelelő JSON formátum!");
+                        return;
+                    }
+
+                    localStorage.setItem('GT43W5_orarend_data', JSON.stringify(data));
+                    renderTable(data);
+                } catch (error) {
+                    console.error(error);
+                    alert("Hiba a JSON betöltésekor!");
+                }
+            };
+            reader.readAsText(file);
+        });
+
+        function loadFromLocalStorage() {
+            const storedData = localStorage.getItem('GT43W5_orarend_data');
+            if (storedData) {
+                renderTable(JSON.parse(storedData));
+            } else {
+                alert("Nincs adat a LocalStorage-ban! Előbb tölts be egy fájlt.");
+            }
+        }
+
+        function renderTable(data) {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+
+            data.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.targy}</td>
+                    <td>${item.idopont.nap}</td>
+                    <td>${item.idopont.tol}</td>
+                    <td>${item.idopont.ig}</td>
+                    <td>${item.helyszin}</td>
+                    <td>${item.oktato}</td>
+                    <td>${item.szak}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+    </script>
+</body>
+</html>
