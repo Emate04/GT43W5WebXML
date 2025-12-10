@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xs:complexType name="sajatCimTipus">
+        <xs:sequence>
+            <xs:element name="Varos" type="xs:string"/>
+            <xs:element name="IRSZ" type="xs:string"/>
+            <xs:element name="Utca" type="xs:string"/>
+            <xs:element name="Hazszam" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="GT43W5_Etterem">
+        <xs:complexType>
+            <xs:sequence>
+                
+                <xs:element name="Beszallito" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Nev" type="xs:string"/>
+                            <xs:element name="Elerhetoseg" type="xs:string"/>
+                            <xs:element name="Cim" type="sajatCimTipus"/>
+                            <xs:element name="Pizzazo_FK" type="xs:int"/>
+                        </xs:sequence>
+                        <xs:attribute name="B_ID" type="xs:int" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="Futar" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Nev" type="xs:string"/>
+                            <xs:element name="Telefonszam" type="xs:string"/>
+                            <xs:element name="Jarmu" type="xs:string"/>
+                            <xs:element name="Pizzazo_FK" type="xs:int"/>
+                        </xs:sequence>
+                        <xs:attribute name="F_ID" type="xs:int" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="Pizzazo" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Nev" type="xs:string"/>
+                            <xs:element name="Nyitvatartas" type="xs:string"/>
+                            <xs:element name="Telefonszam" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="P_ID" type="xs:int" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="Pizza" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Nev" type="xs:string"/>
+                            <xs:element name="Ar" type="xs:int"/>
+                            <xs:element name="Meret" type="xs:int"/>
+                            <xs:element name="Feltet" type="xs:string" maxOccurs="unbounded"/>
+                            <xs:element name="Pizzazo_FK" type="xs:int"/>
+                        </xs:sequence>
+                        <xs:attribute name="Pizza_ID" type="xs:int" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="Rendeles" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Datum" type="xs:date"/>
+                            <xs:element name="Darabszam" type="xs:int"/>
+                            <xs:element name="Pizza_FK" type="xs:int"/>
+                            <xs:element name="Vevo_FK" type="xs:int"/>
+                        </xs:sequence>
+                        <xs:attribute name="R_ID" type="xs:int" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="Vevo" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Nev" type="xs:string"/>
+                            <xs:element name="Telefonszam" type="xs:string"/>
+                            <xs:element name="Cim" type="sajatCimTipus"/>
+                        </xs:sequence>
+                        <xs:attribute name="V_ID" type="xs:int" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="Bankkartya" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Lejarat" type="xs:string"/>
+                            <xs:element name="Bank" type="xs:string"/>
+                            <xs:element name="Tipus" type="xs:string"/>
+                            <xs:element name="Vevo_FK" type="xs:int"/>
+                        </xs:sequence>
+                        <xs:attribute name="K_ID" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+
+        <xs:key name="Pizzazo_Key">
+            <xs:selector xpath="Pizzazo"/>
+            <xs:field xpath="@P_ID"/>
+        </xs:key>
+
+        <xs:key name="Pizza_Key">
+            <xs:selector xpath="Pizza"/>
+            <xs:field xpath="@Pizza_ID"/>
+        </xs:key>
+
+        <xs:key name="Vevo_Key">
+            <xs:selector xpath="Vevo"/>
+            <xs:field xpath="@V_ID"/>
+        </xs:key>
+        
+        <xs:keyref name="Beszallito_To_Pizzazo" refer="Pizzazo_Key">
+            <xs:selector xpath="Beszallito"/>
+            <xs:field xpath="Pizzazo_FK"/>
+        </xs:keyref>
+
+        <xs:keyref name="Futar_To_Pizzazo" refer="Pizzazo_Key">
+            <xs:selector xpath="Futar"/>
+            <xs:field xpath="Pizzazo_FK"/>
+        </xs:keyref>
+
+        <xs:keyref name="Rendeles_To_Pizza" refer="Pizza_Key">
+            <xs:selector xpath="Rendeles"/>
+            <xs:field xpath="Pizza_FK"/>
+        </xs:keyref>
+
+        <xs:keyref name="Rendeles_To_Vevo" refer="Vevo_Key">
+            <xs:selector xpath="Rendeles"/>
+            <xs:field xpath="Vevo_FK"/>
+        </xs:keyref>
+
+        <xs:keyref name="Bankkartya_To_Vevo" refer="Vevo_Key">
+            <xs:selector xpath="Bankkartya"/>
+            <xs:field xpath="Vevo_FK"/>
+        </xs:keyref>
+
+        <xs:unique name="Unique_Vevo_Bankkartya">
+            <xs:selector xpath="Bankkartya"/>
+            <xs:field xpath="Vevo_FK"/>
+        </xs:unique>
+
+    </xs:element>
+</xs:schema>
